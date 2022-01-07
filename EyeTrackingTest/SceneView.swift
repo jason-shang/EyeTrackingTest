@@ -126,26 +126,22 @@ class SceneView: UIViewController, ARSCNViewDelegate {
         return true
     }
     
-    let contentController = TransformVisualization()
+    var contentController = TransformVisualization()
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let faceAnchor = anchor as? ARFaceAnchor else { return }
         
-        // If this is the first time with this anchor, get the controller to create content.
-        // Otherwise (switching content), will change content when setting `selectedVirtualContent`.
+        // If this is the first time with this anchor, get the controller to create content
         DispatchQueue.main.async {
-            //let contentController = self.selectedVirtualContent.makeController()
             if node.childNodes.isEmpty, let contentNode = self.contentController.renderer(renderer, nodeFor: faceAnchor) {
                 node.addChildNode(contentNode)
-                //self.faceAnchorsAndContentControllers[faceAnchor] = contentController
             }
         }
     }
     
     /// - Tag: ARFaceGeometryUpdate
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        guard let faceAnchor = anchor as? ARFaceAnchor,
-            //let contentController = faceAnchorsAndContentControllers[faceAnchor],
+        guard let _ = anchor as? ARFaceAnchor,
             let contentNode = contentController.contentNode else {
             return
         }
@@ -153,9 +149,10 @@ class SceneView: UIViewController, ARSCNViewDelegate {
         self.contentController.renderer(renderer, didUpdate: contentNode, for: anchor)
     }
     
+    /// - Tag: ARFaceGeometryRemove
 //    func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
 //        guard let faceAnchor = anchor as? ARFaceAnchor else { return }
 //
-//        faceAnchorsAndContentControllers[faceAnchor] = nil
+//        self.contentController = nil
 //    }
 }
