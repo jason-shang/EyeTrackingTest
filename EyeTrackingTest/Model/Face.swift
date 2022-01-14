@@ -33,6 +33,10 @@ public class Face {
         self.leftEye.node.simdTransform = anchor.leftEyeTransform
         self.rightEye.node.simdTransform = anchor.rightEyeTransform
         // 瞬き情報更新
+        updateBlink(anchor: anchor)
+    }
+    
+    private func updateBlink(anchor: ARFaceAnchor) {
         self.leftEye.blink = anchor.blendShapes[.eyeBlinkLeft]?.floatValue ?? 0.0
         self.rightEye.blink = anchor.blendShapes[.eyeBlinkRight]?.floatValue ?? 0.0
     }

@@ -22,7 +22,8 @@
 		DCDB4C0227922CD20005DE56 /* EyeTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB4C0127922CD20005DE56 /* EyeTrack.swift */; };
 		DCDB4C0427922CE90005DE56 /* EyeTrackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB4C0327922CE90005DE56 /* EyeTrackController.swift */; };
 		DCDB4C0627922D050005DE56 /* EyeTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB4C0527922D050005DE56 /* EyeTrackView.swift */; };
-		DCDB4C0827922D250005DE56 /* EyeTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB4C0727922D250005DE56 /* EyeTrackViewController.swift */; };
+		DCDB4C0C279231CB0005DE56 /* ARVideoKit in Frameworks */ = {isa = PBXBuildFile; productRef = DCDB4C0B279231CB0005DE56 /* ARVideoKit */; };
+		DCDB4C0D2792337B0005DE56 /* EyeTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB4C0727922D250005DE56 /* EyeTrackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDB4C0C279231CB0005DE56 /* ARVideoKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +131,9 @@
 			dependencies = (
 			);
 			name = EyeTrackingTest;
+			packageProductDependencies = (
+				DCDB4C0B279231CB0005DE56 /* ARVideoKit */,
+			);
 			productName = EyeTrackingTest;
 			productReference = 96EC5CEA272CA0CC0080B000 /* EyeTrackingTest.app */;
 			productType = "com.apple.product-type.application";
@@ -157,6 +162,9 @@
 				Base,
 			);
 			mainGroup = 96EC5CE1272CA0CB0080B000;
+			packageReferences = (
+				DCDB4C0A279231CB0005DE56 /* XCRemoteSwiftPackageReference "ARVideoKit" */,
+			);
 			productRefGroup = 96EC5CEB272CA0CC0080B000 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -187,7 +195,7 @@
 				96AACA8827922BB900557BCD /* EyeTrackInfo.swift in Sources */,
 				96EC5CFE272CA14A0080B000 /* VirtualContent.swift in Sources */,
 				DCDB4C0427922CE90005DE56 /* EyeTrackController.swift in Sources */,
-				DCDB4C0827922D250005DE56 /* EyeTrackViewController.swift in Sources */,
+				DCDB4C0D2792337B0005DE56 /* EyeTrackViewController.swift in Sources */,
 				96EC5CEE272CA0CC0080B000 /* EyeTrackingTestApp.swift in Sources */,
 				96AACA8A27922BD500557BCD /* Face.swift in Sources */,
 				DCDB4C0027922CA50005DE56 /* Extension.swift in Sources */,
@@ -327,10 +335,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EyeTrackingTest/Preview Content\"";
-				DEVELOPMENT_TEAM = LJF9B77S4D;
+				DEVELOPMENT_TEAM = YX9WK28J96;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = /Users/jason/Documents/Workspace/GAMI/NDD/EyeTrackingTest/EyeTrackingTest/Info.plist;
+				INFOPLIST_FILE = EyeTrackingTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -357,10 +365,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EyeTrackingTest/Preview Content\"";
-				DEVELOPMENT_TEAM = LJF9B77S4D;
+				DEVELOPMENT_TEAM = YX9WK28J96;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = /Users/jason/Documents/Workspace/GAMI/NDD/EyeTrackingTest/EyeTrackingTest/Info.plist;
+				INFOPLIST_FILE = EyeTrackingTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -401,6 +409,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DCDB4C0A279231CB0005DE56 /* XCRemoteSwiftPackageReference "ARVideoKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AFathi/ARVideoKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DCDB4C0B279231CB0005DE56 /* ARVideoKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCDB4C0A279231CB0005DE56 /* XCRemoteSwiftPackageReference "ARVideoKit" */;
+			productName = ARVideoKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 96EC5CE2272CA0CB0080B000 /* Project object */;
 }
