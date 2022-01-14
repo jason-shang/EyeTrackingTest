@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Resolver
 
 // MARK: - NavigationIndicator
 struct NavigationIndicator: UIViewControllerRepresentable {
@@ -22,9 +23,15 @@ struct NavigationIndicator: UIViewControllerRepresentable {
 }
 
 struct ContentView: View {
+    
+    // Eye Tracking
+    @ObservedObject var eyeTrackController: EyeTrackController = Resolver.resolve()
+    @ObservedObject var dataController: DataController = Resolver.resolve()
+    
     @State var page = "Home"
     var body: some View {
         VStack {
+            Text("hi")
             if page == "Home" {
                 Button("Switch to ARView") {
                     self.page = "ARView"

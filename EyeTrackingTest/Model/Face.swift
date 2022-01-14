@@ -37,8 +37,10 @@ public class Face {
     }
     
     private func updateBlink(anchor: ARFaceAnchor) {
-        self.leftEye.blink = anchor.blendShapes[.eyeBlinkLeft]?.floatValue ?? 0.0
-        self.rightEye.blink = anchor.blendShapes[.eyeBlinkRight]?.floatValue ?? 0.0
+        leftEye.updateBlink(blink: anchor.blendShapes[.eyeBlinkLeft]?.floatValue ?? 0.0)
+        rightEye.updateBlink(blink: anchor.blendShapes[.eyeBlinkRight]?.floatValue ?? 0.0)
+//        self.leftEye.blink = anchor.blendShapes[.eyeBlinkLeft]?.floatValue ?? 0.0
+//        self.rightEye.blink = anchor.blendShapes[.eyeBlinkRight]?.floatValue ?? 0.0
     }
 
     // デバイスとの距離を取得

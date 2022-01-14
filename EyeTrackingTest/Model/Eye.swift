@@ -14,9 +14,13 @@ import ARKit
 public class Eye {
     public var lookAtPosition: CGPoint = CGPoint(x: 0, y: 0)
     public var lookAtPoint: CGPoint = CGPoint(x: 0, y: 0)
-    public var blink: Float = 1.0
     public var node: SCNNode
     public var target: SCNNode
+    public var numBlinks: Int = 0
+    public var blink: Float = 1.0
+    
+    //TODO: need to test and adjust this threshold
+    private var blinkThreshold: Float = 0.9
 
     public var isShowRayHint: Bool
     
@@ -64,5 +68,13 @@ public class Eye {
         }
 
         return self.lookAtPosition
+    }
+    
+    // blink = 0.0 is eye completely open, blink = 1.0 is eye completely closed
+    public func updateBlink(blink: Float) {
+        self.blink = blink
+        if (blink > blinkThreshold) {
+            self.numBlinks += 1
+        }
     }
 }

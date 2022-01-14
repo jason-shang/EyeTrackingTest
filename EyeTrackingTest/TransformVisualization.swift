@@ -49,7 +49,7 @@ class TransformVisualization: NSObject, VirtualContentController {
         rightEyeNode.simdPivot = float4x4(diagonal: [3, 3, 3, 1])
         leftEyeNode.simdPivot = float4x4(diagonal: [3, 3, 3, 1])
         
-        // Add left and right eye nodes as childNodes to the overall contentNode SCCNode (the overall face?)
+        // Add left and right eye nodes as childNodes t/Users/richarddeng/Desktop/EyeTrackingTest/EyeTrackingTest/Preview Content/Preview Assets.xcassetso the overall contentNode SCCNode (the overall face?)
         anchorNode.addChildNode(rightEyeNode)
         anchorNode.addChildNode(leftEyeNode)
     }

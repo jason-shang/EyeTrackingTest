@@ -24,6 +24,8 @@
 		DCDB4C0627922D050005DE56 /* EyeTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB4C0527922D050005DE56 /* EyeTrackView.swift */; };
 		DCDB4C0C279231CB0005DE56 /* ARVideoKit in Frameworks */ = {isa = PBXBuildFile; productRef = DCDB4C0B279231CB0005DE56 /* ARVideoKit */; };
 		DCDB4C0D2792337B0005DE56 /* EyeTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB4C0727922D250005DE56 /* EyeTrackViewController.swift */; };
+		DCDB4C1027923C6B0005DE56 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = DCDB4C0F27923C6B0005DE56 /* Resolver */; };
+		DCDB4C1227923CB60005DE56 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB4C1127923CB60005DE56 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,7 @@
 		DCDB4C0327922CE90005DE56 /* EyeTrackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeTrackController.swift; sourceTree = "<group>"; };
 		DCDB4C0527922D050005DE56 /* EyeTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeTrackView.swift; sourceTree = "<group>"; };
 		DCDB4C0727922D250005DE56 /* EyeTrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeTrackViewController.swift; sourceTree = "<group>"; };
+		DCDB4C1127923CB60005DE56 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDB4C1027923C6B0005DE56 /* Resolver in Frameworks */,
 				DCDB4C0C279231CB0005DE56 /* ARVideoKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +100,7 @@
 				DCDB4C0527922D050005DE56 /* EyeTrackView.swift */,
 				DCDB4C0727922D250005DE56 /* EyeTrackViewController.swift */,
 				96EC5CED272CA0CC0080B000 /* EyeTrackingTestApp.swift */,
+				DCDB4C1127923CB60005DE56 /* DataController.swift */,
 				96EC5CEF272CA0CC0080B000 /* ContentView.swift */,
 				96EC5CF1272CA0D70080B000 /* Assets.xcassets */,
 				96EC5CF3272CA0D70080B000 /* Preview Content */,
@@ -133,6 +138,7 @@
 			name = EyeTrackingTest;
 			packageProductDependencies = (
 				DCDB4C0B279231CB0005DE56 /* ARVideoKit */,
+				DCDB4C0F27923C6B0005DE56 /* Resolver */,
 			);
 			productName = EyeTrackingTest;
 			productReference = 96EC5CEA272CA0CC0080B000 /* EyeTrackingTest.app */;
@@ -164,6 +170,7 @@
 			mainGroup = 96EC5CE1272CA0CB0080B000;
 			packageReferences = (
 				DCDB4C0A279231CB0005DE56 /* XCRemoteSwiftPackageReference "ARVideoKit" */,
+				DCDB4C0E27923C6B0005DE56 /* XCRemoteSwiftPackageReference "Resolver" */,
 			);
 			productRefGroup = 96EC5CEB272CA0CC0080B000 /* Products */;
 			projectDirPath = "";
@@ -201,6 +208,7 @@
 				DCDB4C0027922CA50005DE56 /* Extension.swift in Sources */,
 				96EC5D02272CA5110080B000 /* SceneView.swift in Sources */,
 				DCDB4C0227922CD20005DE56 /* EyeTrack.swift in Sources */,
+				DCDB4C1227923CB60005DE56 /* DataController.swift in Sources */,
 				96EC5CFC272CA1040080B000 /* TransformVisualization.swift in Sources */,
 				96AACA8427922B5700557BCD /* Device.swift in Sources */,
 				96AACA8627922B7C00557BCD /* Eye.swift in Sources */,
@@ -419,6 +427,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		DCDB4C0E27923C6B0005DE56 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -426,6 +442,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DCDB4C0A279231CB0005DE56 /* XCRemoteSwiftPackageReference "ARVideoKit" */;
 			productName = ARVideoKit;
+		};
+		DCDB4C0F27923C6B0005DE56 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCDB4C0E27923C6B0005DE56 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

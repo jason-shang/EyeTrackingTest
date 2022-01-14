@@ -46,6 +46,9 @@ public class EyeTrackInfo {
 
     public var rightEyeBlink: Float
     public var leftEyeBlink: Float
+    
+    public var rightEyeNumBlinks: Int
+    public var leftEyeNumBlinks: Int
 
     public var rightEyeDistance: Float
     public var leftEyeDistance: Float
@@ -72,6 +75,9 @@ public class EyeTrackInfo {
         self.rightEyeBlink = face.rightEye.blink
         self.leftEyeBlink = face.leftEye.blink
 
+        self.rightEyeNumBlinks = face.rightEye.numBlinks
+        self.leftEyeNumBlinks = face.leftEye.numBlinks
+        
         self.rightEyeDistance = face.rightEye.getDistanceToDevice()
         self.leftEyeDistance = face.leftEye.getDistanceToDevice()
 
@@ -96,6 +102,7 @@ public class EyeTrackInfo {
             String(format: "%.8F", Float(self.centerEyeLookAtPoint.x)), String(format: "%.8F", Float(self.centerEyeLookAtPoint.y))]
         let eyeself = [
             String(self.rightEyeBlink), String(self.leftEyeBlink),
+            String(self.rightEyeNumBlinks), String(self.leftEyeNumBlinks),
             String(self.rightEyeDistance), String(self.leftEyeDistance)]
         var row = detail + worldPosition
         row = row + lookAtPosition
