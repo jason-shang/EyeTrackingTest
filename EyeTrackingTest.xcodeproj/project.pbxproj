@@ -18,6 +18,11 @@
 		96EC5CFC272CA1040080B000 /* TransformVisualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EC5CFB272CA1040080B000 /* TransformVisualization.swift */; };
 		96EC5CFE272CA14A0080B000 /* VirtualContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EC5CFD272CA14A0080B000 /* VirtualContent.swift */; };
 		96EC5D02272CA5110080B000 /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EC5D01272CA5110080B000 /* SceneView.swift */; };
+		DCDB4C0027922CA50005DE56 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB4BFF27922CA50005DE56 /* Extension.swift */; };
+		DCDB4C0227922CD20005DE56 /* EyeTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB4C0127922CD20005DE56 /* EyeTrack.swift */; };
+		DCDB4C0427922CE90005DE56 /* EyeTrackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB4C0327922CE90005DE56 /* EyeTrackController.swift */; };
+		DCDB4C0627922D050005DE56 /* EyeTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB4C0527922D050005DE56 /* EyeTrackView.swift */; };
+		DCDB4C0827922D250005DE56 /* EyeTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDB4C0727922D250005DE56 /* EyeTrackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		96EC5CFB272CA1040080B000 /* TransformVisualization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformVisualization.swift; sourceTree = "<group>"; };
 		96EC5CFD272CA14A0080B000 /* VirtualContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualContent.swift; sourceTree = "<group>"; };
 		96EC5D01272CA5110080B000 /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
+		DCDB4BFF27922CA50005DE56 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		DCDB4C0127922CD20005DE56 /* EyeTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeTrack.swift; sourceTree = "<group>"; };
+		DCDB4C0327922CE90005DE56 /* EyeTrackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeTrackController.swift; sourceTree = "<group>"; };
+		DCDB4C0527922D050005DE56 /* EyeTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeTrackView.swift; sourceTree = "<group>"; };
+		DCDB4C0727922D250005DE56 /* EyeTrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeTrackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,11 @@
 			isa = PBXGroup;
 			children = (
 				96AACA8227922B4400557BCD /* Model */,
+				DCDB4BFF27922CA50005DE56 /* Extension.swift */,
+				DCDB4C0127922CD20005DE56 /* EyeTrack.swift */,
+				DCDB4C0327922CE90005DE56 /* EyeTrackController.swift */,
+				DCDB4C0527922D050005DE56 /* EyeTrackView.swift */,
+				DCDB4C0727922D250005DE56 /* EyeTrackViewController.swift */,
 				96EC5CED272CA0CC0080B000 /* EyeTrackingTestApp.swift */,
 				96EC5CEF272CA0CC0080B000 /* ContentView.swift */,
 				96EC5CF1272CA0D70080B000 /* Assets.xcassets */,
@@ -171,12 +186,17 @@
 				96EC5CF0272CA0CC0080B000 /* ContentView.swift in Sources */,
 				96AACA8827922BB900557BCD /* EyeTrackInfo.swift in Sources */,
 				96EC5CFE272CA14A0080B000 /* VirtualContent.swift in Sources */,
+				DCDB4C0427922CE90005DE56 /* EyeTrackController.swift in Sources */,
+				DCDB4C0827922D250005DE56 /* EyeTrackViewController.swift in Sources */,
 				96EC5CEE272CA0CC0080B000 /* EyeTrackingTestApp.swift in Sources */,
 				96AACA8A27922BD500557BCD /* Face.swift in Sources */,
+				DCDB4C0027922CA50005DE56 /* Extension.swift in Sources */,
 				96EC5D02272CA5110080B000 /* SceneView.swift in Sources */,
+				DCDB4C0227922CD20005DE56 /* EyeTrack.swift in Sources */,
 				96EC5CFC272CA1040080B000 /* TransformVisualization.swift in Sources */,
 				96AACA8427922B5700557BCD /* Device.swift in Sources */,
 				96AACA8627922B7C00557BCD /* Eye.swift in Sources */,
+				DCDB4C0627922D050005DE56 /* EyeTrackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
