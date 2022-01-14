@@ -37,6 +37,7 @@ class TransformVisualization: NSObject, VirtualContentController {
         guard #available(iOS 12.0, *), let faceAnchor = anchor as? ARFaceAnchor
             else { return }
         
+        // simdTransform is a combination of node’s simdRotation, simdPosition, and simdScale properties
         rightEyeNode.simdTransform = faceAnchor.rightEyeTransform
         leftEyeNode.simdTransform = faceAnchor.leftEyeTransform
     }
